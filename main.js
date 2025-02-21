@@ -17,6 +17,12 @@ document.getElementById("sendBtn").addEventListener("click", function() {
       // Formu temizleme işlemi
       document.getElementById("contactForm").reset();
     }
+
+    $(window).resize(function() {
+      if ($(window).width() < 768) {
+        $('#navmenu').collapse('hide'); // Collapse content on tablet and smaller
+      }
+    });
   });
 
   // E-posta alanındaki @ işareti kontrolü
